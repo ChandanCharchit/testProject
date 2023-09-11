@@ -1,3 +1,3 @@
 # testProject
 
-** Testing the Webhook for demo **
+** Testing the Webhook API for demo **
