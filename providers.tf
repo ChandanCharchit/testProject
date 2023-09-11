@@ -1,1 +1,1 @@
-reuired_providers {}
+required_providers {}
