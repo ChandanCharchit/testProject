@@ -1,1 +1,1 @@
-required_providers = {[[]]}
+resource "aws_vpc"
