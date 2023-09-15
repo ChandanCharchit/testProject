@@ -12,7 +12,7 @@ for word in words:
         unique_words[word] += 1
 
 print(unique_words)
-for k, v in unique_words.
+for k, v in unique_words
 
 
 
