@@ -1,4 +1,4 @@
-# Create a new load balancer
+# Create a load balancer
 resource "aws_elb" "weblb" {
   name = "weblb-terraform-elb"
 
