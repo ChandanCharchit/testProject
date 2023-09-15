@@ -11,7 +11,7 @@ class Mix:
 
 
 mix1 = Mix(2, 1)
-mix2 = Mix(2, 2)
+mix2 = Mix(2, 4)
 
 mix3  = mix1+mix2
 
