@@ -20,3 +20,30 @@ resource "aws_kms_alias" "logs_key_alias" {
   name          = "alias/${local.resource_prefix.value}-logs-bucket-key"
   target_key_id = "${aws_kms_key.logs_key.key_id}"
 }
+
+resource "aws_s3_bucket_acl" "example" {
+  depends_on = [aws_s3_bucket_ownership_controls.example]
+ 
+  bucket = aws_s3_bucket.example.id
+  access_control_policy {
+    grant {
+      grantee {
+        id   = data.aws_canonical_user_id.current.id
+        type = "CanonicalUser"
+      }
+      permission = "READ"
+    }
+ 
+    grant {
+      grantee {
+        type = "Group"
+        uri  = "http://acs.amazonaws.com/groups/s3/LogDelivery"
+      }
+      permission = "READ_ACP"
+    }
+ 
+    owner {
+      id = data.aws_canonical_user_id.current.id
+    }
+  }
+}
