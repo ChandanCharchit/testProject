@@ -34,3 +34,7 @@ resource "aws_ebs_volume" "ok_ebs2" {
      }
    }
  }
+
+resource "aws_vpc" "ok_vpc" {
+  cidr_block = "10.0.0.0/16"
+}
