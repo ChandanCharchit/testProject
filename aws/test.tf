@@ -31,3 +31,8 @@ resource "aws_flow_log" "example" {
   traffic_type    = "ALL"
   vpc_id          = aws_vpc.ok_vpc.id
 }
+
+resource "aws_s3_bucket" "foo" {
+  bucket = "qwerty"
+  acl = "private"
+}
